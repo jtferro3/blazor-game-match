@@ -28,7 +28,11 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
+Bin/
+bin/
 [Bb]in/
+Obj/
+obj/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
