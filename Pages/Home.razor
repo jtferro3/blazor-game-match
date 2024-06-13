@@ -47,9 +47,9 @@
         };
     List<string> shuffledAnimals = new List<string>();
     int matchesFound = 0;
-    Timer timer;
+    Timer? timer;
     int tenthsOfSecondsElapsed = 0;
-    string timeDisplay;
+    string timeDisplay = string.Empty;
     
     protected override void OnInitialized()
     {
@@ -79,7 +79,7 @@
             lastAnimalFound = animal;
             lastDescription = animalDescription;
 
-            timer.Start();
+            timer!.Start();
         }
         else if ((lastAnimalFound == animal) && (animalDescription != lastDescription))
         {
@@ -94,7 +94,7 @@
             matchesFound++;
             if (matchesFound == 8)
             {
-                timer.Stop();
+                timer!.Stop();
                 timeDisplay += " - Play Again?";
                 
                 SetUpGame();
@@ -108,7 +108,7 @@
         }
     }
 
-    private void Timer_Tick(Object source, ElapsedEventArgs e)
+    private void Timer_Tick(Object? source, ElapsedEventArgs e)
     {
         InvokeAsync(() =>
         {
