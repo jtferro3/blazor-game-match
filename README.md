@@ -1,1 +1,1 @@
-Animal Game Match is laid out in a grid.
+Animal Matching Game is laid out in a grid.
